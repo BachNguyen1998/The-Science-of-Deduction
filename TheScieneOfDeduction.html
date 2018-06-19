@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Science of Deduction</title>
+	<style type="text/css">
+		div.ex1_1 {
+		width: auto;
+		height: auto;
+    	padding: 10px;
+    	border: 5px solid gray;
+    	margin: 10px;}
+    	div.ex1_2 {
+		width: auto;
+		height: auto;
+    	padding: 10px;
+    	border: 5px solid gray;
+    	margin: 10px;}
+    	div.ex1_3 {
+		width: auto;
+		height: auto;
+    	padding: 10px;
+    	border: 5px solid gray;
+    	margin: 10px;}
+    	div.ex2 {
+		width: auto;
+		height: auto;
+    	padding: 10px;
+    	border: 5px solid gray;
+    	margin: 10px;}
+    	div.ex3_1 {
+		width: auto;
+		height: auto;
+    	padding: 10px;
+    	border: 5px solid gray;
+    	margin: 10px;}
+    	div.ex3_2 {
+		width: auto;
+		height: auto;
+    	padding: 10px;
+    	border: 5px solid gray;
+    	margin: 10px;}
+	</style>
+	<script type="text/javascript">
+		var score = 0;
+		var t1=10;
+		var t2=10;
+		var t3=10;
+		var t4=300;
+    	var t5=900;
+    	var t6=900;
+    	var x1,x2,x3,x4,x5,x6;
+		var ex1_1a = function()
+		{
+			score=score-10;
+			alert("Wrong! Score: "+score);
+		}
+		var ex1_1b = function()
+		{
+			alert("Wait...");
+			score=score+10;
+			setTimeout(function(){alert("Right! You have "+score+" score");}, 1000);
+
+		}
+		var ex1_1c = function()
+		{
+			score=score-10;
+			alert("Wrong! Score: "+score);
+		}
+		var ex1_2a = function()
+		{
+			score=score-10;
+			alert("Sorry! Wrong... Score: "+score);
+		}
+		var ex1_2b = function()
+		{
+			score=score+10;
+			alert("Yes! Keep it going... Your score is: "+score)
+		}
+		var ex1_2c = function()
+		{
+			score=score-10;
+			alert("Sorry! Wrong... Score: "+score);
+		}
+		var ex1_3a = function()
+		{
+			score=score+10;
+			alert("Right! Sherlock is paying attenton to you... Your score is: "+score);
+		}
+		var ex1_3b = function()
+		{
+			score=score-10;
+			alert("Wrong... Sherlock is leaving... Score: "+score);
+		}
+		var ex1_3c = function()
+		{
+			score=score-10;
+			alert("Wrong... Sherlock is leaving... Score: "+score);
+		}
+		var ex2_a = function()
+		{
+			score=score-10;
+			alert("'Wrong!!! Your IQ is not high enough to assist me. Don't you see Charles Dicken's books is more than others'?'-Sherlock. Score: "+score)
+		}
+		var ex2_b = function()
+		{
+			score=score-10;
+			alert("'Wrong!!! Your observation is even lower than John... Don't you see Charles Dicken's books is more than others'?'-Sherlock. Score: "+score)
+		}
+		var ex2_c = function()
+		{
+			score=score+10;
+			alert("'Oh yes! Good observation... You're very promising.'-Sherlock. Your score is: "+score);
+		}
+		var checkcode1= function()
+		{
+			var code1 = document.getElementById("code1").value;
+			if (code1.toUpperCase() == "SHERLOCK I AM WATCHING YOU")
+			{
+				score=score+20;
+				alert("Brilliant! Score: "+score);
+			}
+			else
+			{
+				score=score-15;
+				alert("Wrong... Too bad. 'Sherlock I am watching you'. Score: "+score);
+			}
+		}
+
+		var checkcode2 = function() 
+		{
+			var code2 = document.getElementById("code2").value;
+			if (code2.toUpperCase() == "SHERLOCK I AM COMING TO GET YOU" ) 
+			{
+				score=score+20;
+				alert("Impressive! Score: "+score);
+			} 
+			else 
+			{
+				score=score-15;
+				alert("Wrong!! Score: "+score);
+			}
+		if (score>=40)
+		{
+			setTimeout(function()
+			{
+				alert("Well done! Your score is high enough. You are now officially my assistant. Congrats!");
+			}, 3000);
+		}
+		else
+		{
+			setTimeout(function()
+			{
+				alert("Too bad. Your score is not high enough. You failed to be my assistant.");
+			}, 3000);
+		}
+		}
+		function count1()
+		{
+			document.getElementById("time1").value=t1;
+			if (t1==-1)
+			{
+				alert("Time's up!");
+				t1=t1+1;
+				time1.value=t1;
+				clearTimeout(x1);
+			}
+			else
+			{
+				t1--;
+				x1= setTimeout(function() {count1()}, 1000);
+			}
+		}
+		function count2()
+		{
+			document.getElementById("time2").value=t2;
+			if (t2==-1)
+			{
+				alert("Time's up!");
+				t2=t2+1;
+				time2.value=t2;
+				clearTimeout(x2);
+			}
+			else
+			{
+				t2--;
+				x2= setTimeout(function() {count2()}, 1000);
+			}
+		}
+		function count3()
+		{
+			document.getElementById("time3").value=t3;
+			if (t3==-1)
+			{
+				alert("Time's up!");
+				t3=t3+1;
+				time3.value=t3;
+				clearTimeout(x3);
+			}
+			else
+			{
+				t3--;
+				x3= setTimeout(function() {count3()}, 1000);
+			}
+		}
+		function count4()
+		{
+			document.getElementById("time4").value=t4;
+			if (t4==-1)
+			{
+				alert("Time's up!");
+				t4=t4+1;
+				time4.value=t4;
+				clearTimeout(x4);
+			}
+			else
+			{
+				t4--;
+				x4= setTimeout(function() {count4()}, 1000);
+			}
+		}
+		function count5()
+		{
+			document.getElementById("time5").value=t5;
+			if (t5==-1)
+			{
+				alert("Time's up!");
+				t5=t5+1;
+				time5.value=t5;
+				clearTimeout(x5);
+			}
+			else
+			{
+				t5--;
+				x5= setTimeout(function() {count5()}, 1000);
+			}
+		}
+		function count6()
+		{
+			document.getElementById("time6").value=t6;
+			if (t6==-1)
+			{
+				alert("Time's up!");
+				t6=t6+1;
+				time6.value=t6;
+				clearTimeout(x6);
+			}
+			else
+			{
+				t6--;
+				x6= setTimeout(function() {count6()}, 1000);
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<h1>The Science of Deduction</h1>
+	<marquee direction="right">The direction of text will be from bottom to top.</marquee>
+	<h2>~Based on the work of Sir Arthur Conan Doyle</h2>
+	<h3>Game 1 (Easy - Get Sherlock's attention!): Can you guess these people's job?</h3>
+	<div class="ex1_1">
+	<input type="textbox" id="time1" value="10"><button onclick="count1()">Start!</button><br>
+	<img src="job1.jpg" alt="job1" style="width:500px; height:500px;">
+	<p>What company does Midge work for?</p>
+	<button onclick="ex1_1a()">A. A fashion Marketing Company</button>
+	<button onclick="ex1_1b()">A. B. A tech startup</button>
+	<button onclick="ex1_1c()">A. C. An intertior design site</button>
+	</div>
+	<div class="ex1_2">
+	<input type="textbox" id="time2" value="10"><button onclick="count2()">Start!</button><br>
+	<img src="job2.jpg" alt="job2" style="width:500px; height:500px;">
+	<p>What is Shu's proffession?</p>
+	<button onclick="ex1_2a()">A. Artist</button>
+	<button onclick="ex1_2b()">B. Blogger</button>
+	<button onclick="ex1_2c()">C. Journalist</button>
+	</div>
+	<div class="ex1_3">
+	<input type="textbox" id="time3" value="10"><button onclick="count3()">Start!</button><br>
+	<img src="job3.jpg" alt="job3" style="width:500px; height:500px;">
+	<p>What is Allan's job?   </p>
+	<button onclick="ex1_3a()">A. Business Analyst</button>
+	<button onclick="ex1_3b()">B. Underwriter</button>
+	<button onclick="ex1_3c()">C. Front of house</button>
+	</div>
+	<h3>Game 2 (Normal - Sherlock's small test for you to check whether you're clever enough..): Guess the password!</h3>
+	<div class="ex2">
+	<input type="textbox" id="time4" value="300"><button onclick="count4()">Start!</button><br>
+	<p>Sherlock is under a case in which he needs to have access to the Commander's computer. If you're brilliant enough, you can guess the password of the computer. Hint: You walk into the Commander's room and you see a bookshelf, his secretary says that he is a book-lover. </p>
+	<img src="password1.jpg" alt="password1" style="width:800px; height:500px;">
+	<img src="password2.jpg" alt="password2" style="width:800px; height:500px;">
+	<button onclick="ex2_a()">A. Doyle</button>
+	<button onclick="ex2_b()">B. Joyce</button>
+	<button onclick="ex2_c()">C. Dickens</button>
+	</div>
+	<h3>Game 3 (Tough - Sherlock's final tests to recruit you to be his assistant.): Let's help Sherlock crack the code!</h3>
+	<div class="ex3_1">
+	<h4>Code 1:</h4>
+	<input type="textbox" id="time5" value="900"><button onclick="count5()">Start!</button><br>
+	<img src="code1.png" alt="code1" style="width:800px; height:500px;">
+	<p>Hint: D-->S; S-->H </p>
+	<img src="code1b.gif" alt="code1" style="width:500px; height:500px;">
+	<input type="textbox" id="code1"><button onclick="checkcode1()">Submit</button>
+	</div>
+	<div class="ex3_2">
+	<h4>Code 2: </h4>
+	<input type="textbox" id="time6" value="900"><button onclick="count6()">Start!</button><br>
+	<img src="code2.png" alt="code2" style="width:800px; height:500px;">
+	<p>Hint:</p>
+	<img src="code2b.png" alt="code2" style="width:500px; height:500px;">
+	<input type="textbox" id="code2"><button onclick="checkcode2()">Submit</button>
+	</div>
+</body>
+</html>
